@@ -7,27 +7,24 @@ import Steps, { Step } from 'rc-steps';
 const container = document.getElementById('__react-content');
 
 const steps = [{
-  title: '已完成',
-  description: '这里是多信息的描述啊描述啊描述啊描述啊哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶',
+  title: 'Type',
 }, {
-  title: '进行中',
-  description: '这里是',
+  title: 'Size',
 }, {
-  title: '待运行',
-  description: '这里是多信息的描述啊描述啊描述啊描述啊哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶',
+  title: 'Flowers',
 }, {
-  title: '待运行',
-  description: '这里是多信息的描述啊描述啊描述啊描述啊哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶',
+  title: 'Pay',
 }, {
-  title: '待运行',
-  description: '这里是多信息的描述啊描述啊描述啊描述啊哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶哦耶',
+  title: 'Ship',
+}, {
+  title: 'Enjoy',
 }].map((s, i) => {
   return (
     <Step
       key={i}
       status={s.status}
       title={s.title}
-      description={s.description}
+	  image={s.image}
     />
   );
 });

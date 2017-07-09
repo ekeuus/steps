@@ -11,7 +11,7 @@ export default class Step extends React.Component {
     const {
       className, prefixCls, style, itemWidth,
       status = 'wait', iconPrefix, icon, wrapperStyle,
-      adjustMarginRight, stepNumber,
+      adjustMarginRight, stepNumber, image,
       description, title, progressDot, ...restProps } = this.props;
     const iconClassName = classNames({
       [`${prefixCls}-icon`]: true,
@@ -67,11 +67,19 @@ export default class Step extends React.Component {
             <div className={`${prefixCls}-head-inner`}>{iconNode}</div>
           </div>
           <div ref="main" className={`${prefixCls}-main`}>
-            <div
-              className={`${prefixCls}-title`}
-              style={{ background: wrapperStyle.background || wrapperStyle.backgroundColor }}
-            >{title}</div>
-            {description ? <div className={`${prefixCls}-description`}>{description}</div> : ''}
+		  	{image ?
+			  <div
+	            className={`${prefixCls}-image`}
+	            >
+				  <img src={image} />
+			  </div> : ''
+			}
+            {title ?
+			  <div
+	            className={`${prefixCls}-title`}
+	            style={{ background: wrapperStyle.background || wrapperStyle.backgroundColor }}
+	          >{title}</div> : ''
+			}
           </div>
         </div>
       </div>
@@ -90,6 +98,7 @@ Step.propTypes = {
   ]),
   status: PropTypes.string,
   iconPrefix: PropTypes.string,
+  image: PropTypes.string,
   icon: PropTypes.node,
   adjustMarginRight: PropTypes.oneOfType([
     PropTypes.number,
