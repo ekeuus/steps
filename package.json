@@ -1,6 +1,6 @@
 {
   "name": "rc-steps-image",
-  "version": "2.5.3",
+  "version": "2.5.2",
   "description": "steps ui component for react with support for images on each step",
   "keywords": [
     "react",
@@ -8,6 +8,10 @@
     "react-steps"
   ],
   "main": "./lib/index",
+  "files": [
+    "lib",
+    "assets/*.css"
+  ],
   "homepage": "http://github.com/ekeuus/steps",
   "maintainers": [
     {
