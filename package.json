@@ -1,7 +1,7 @@
 {
   "name": "rc-steps-image",
-  "version": "2.5.1",
-  "description": "steps ui component for react",
+  "version": "2.5.2",
+  "description": "steps ui component for react with support for images on each step",
   "keywords": [
     "react",
     "react-component",
@@ -12,19 +12,19 @@
     "lib",
     "assets/*.css"
   ],
-  "homepage": "http://github.com/react-component/steps",
+  "homepage": "http://github.com/ekeuus/steps",
   "maintainers": [
     {
-      "name": "yuhangge",
-      "email": "abeyuhang@gmail.com"
+      "name": "Ekke Uustalu",
+      "email": "ekke@tdl.ee"
     }
   ],
   "repository": {
     "type": "git",
-    "url": " git+ssh://git@github.com/react-component/steps.git"
+    "url": " git+ssh://git@github.com/ekeuus/steps.git"
   },
   "bugs": {
-    "url": "http://github.com/react-component/steps/issues"
+    "url": "http://github.com/ekeuus/steps/issues"
   },
   "licenses": "MIT",
   "config": {
