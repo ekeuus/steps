@@ -18,7 +18,7 @@
 
 @primary-color: #d1dec2;
 @process-icon-color: @primary-color;
-@process-title-color: #d1dec2;
+@process-title-color: @primary-color;
 @process-description-color: @process-title-color;
 @process-tail-color: #e9e9e9;
 @wait-icon-color: #ccc;
@@ -431,6 +431,13 @@
     }
   }
   .@{stepsPrefixClass}-status-process {
+	.@{stepsPrefixClass}-image {
+	  background: transparent; /* For browsers that do not support gradients */
+  	  background: -webkit-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* Safari 5.1-6.0 */
+  	  background: -o-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* For Opera 11.6-12.0 */
+  	  background: -moz-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* For Firefox 3.6-15 */
+  	  background: radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* Standard syntax */
+	}
     .@{stepsPrefixClass}-head {
       top: -3px;
       &-inner {
