@@ -8,10 +8,6 @@
     "react-steps"
   ],
   "main": "./lib/index",
-  "files": [
-    "lib",
-    "assets/*.css"
-  ],
   "homepage": "http://github.com/ekeuus/steps",
   "maintainers": [
     {
