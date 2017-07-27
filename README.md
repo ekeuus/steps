@@ -1,8 +1,8 @@
-# rc-steps
+# rc-steps-image
 
 ---
 
-React steps component
+React steps component made to work with images instead of text
 
 ## Development
 
@@ -12,6 +12,8 @@ npm start
 ```
 
 ## Usage
+
+CHECK THE ONLY EXAMPLE PROVIDED TO SEE HOW TO USE IT!
 
 ```jsx
 <Steps current={1}>
@@ -25,8 +27,7 @@ npm start
 
 http://localhost:8002/examples
 
-online example: http://react-component.github.io/steps/examples/
 
 ## License
 
-rc-steps is released under the MIT license.
+rc-steps-image is released under the MIT license.

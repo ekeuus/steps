@@ -1,6 +1,6 @@
 {
   "name": "rc-steps-image",
-  "version": "2.5.6",
+  "version": "2.5.7",
   "description": "steps ui component for react with support for images on each step",
   "keywords": [
     "react",

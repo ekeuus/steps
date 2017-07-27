@@ -12,7 +12,7 @@ export default class Step extends React.Component {
       className, prefixCls, style, itemWidth,
       status = 'wait', iconPrefix, icon, wrapperStyle,
       adjustMarginRight, stepNumber, image,
-      description, title, progressDot, ...restProps } = this.props;
+      description, title, progressDot, onClick, ...restProps } = this.props;
     const iconClassName = classNames({
       [`${prefixCls}-icon`]: true,
       [`${iconPrefix}icon`]: true,
@@ -71,7 +71,7 @@ export default class Step extends React.Component {
 			  <div
 	            className={`${prefixCls}-image`}
 	            >
-				  <img src={image} />
+				  <img src={image} onClick={onClick} />
 			  </div> : ''
 			}
             {title ?

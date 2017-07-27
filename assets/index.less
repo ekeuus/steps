@@ -55,6 +55,9 @@
     }
 
     &.@{stepsPrefixClass}-status-wait {
+	  .@{stepsPrefixClass}-image {
+  		  cursor: not-allowed;
+  	  }
       .@{stepsPrefixClass}-head-inner {
         border-color: @wait-icon-color;
         background-color: #fff;
@@ -97,6 +100,9 @@
       }
     }
     &.@{stepsPrefixClass}-status-finish {
+      .@{stepsPrefixClass}-image {
+		  cursor: pointer;
+	  }
       .@{stepsPrefixClass}-head-inner {
         border-color: @finish-icon-color;
         background-color: #fff;
@@ -410,8 +416,15 @@
   }
   .@{stepsPrefixClass}-image {
 	  width: 100%;
+	  overflow: hidden;
 	  img {
 		  width: 100%;
+		  opacity: 0.7;
+		  transition: all 200ms ease;
+	  }
+	  img:hover {
+		  opacity: 1;
+		  transform: scale(1.2)
 	  }
   }
   .@{stepsPrefixClass}-head {
@@ -432,11 +445,12 @@
   }
   .@{stepsPrefixClass}-status-process {
 	.@{stepsPrefixClass}-image {
-	  background: transparent; /* For browsers that do not support gradients */
-  	  background: -webkit-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* Safari 5.1-6.0 */
-  	  background: -o-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* For Opera 11.6-12.0 */
-  	  background: -moz-radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* For Firefox 3.6-15 */
-  	  background: radial-gradient(@primary-color 5%, @primary-color 15%, transparent 60%); /* Standard syntax */
+	  background: white; /* For browsers that do not support gradients */
+  	  background: -webkit-radial-gradient(@primary-color 5%, @primary-color 15%, white 60%); /* Safari 5.1-6.0 */
+  	  background: -o-radial-gradient(@primary-color 5%, @primary-color 15%, white 60%); /* For Opera 11.6-12.0 */
+  	  background: -moz-radial-gradient(@primary-color 5%, @primary-color 15%, white 60%); /* For Firefox 3.6-15 */
+  	  background: radial-gradient(@primary-color 5%, @primary-color 15%, white 60%); /* Standard syntax */
+	  cursor: pointer;
 	}
     .@{stepsPrefixClass}-head {
       top: -3px;

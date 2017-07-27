@@ -47,7 +47,7 @@ export default class Steps extends React.Component {
   render() {
     const props = this.props;
     const { prefixCls, style = {}, className, children, direction,
-            labelPlacement, iconPrefix, status, size, current, progressDot, ...restProps } = props;
+            labelPlacement, iconPrefix, status, size, current, progressDot, onClick, ...restProps } = props;
     const lastIndex = children.length - 1;
     const reLayouted = this.state.lastStepOffsetWidth > 0;
     const adjustedlabelPlacement = !!progressDot ? 'vertical' : labelPlacement;
@@ -69,6 +69,8 @@ export default class Steps extends React.Component {
               ? null : `${100 / lastIndex}%`;
             const adjustMarginRight = (direction === 'vertical' || idx === lastIndex)
               ? null : -Math.round(this.state.lastStepOffsetWidth / lastIndex + 1);
+
+		  	const canClick = current < idx;
             const np = {
               stepNumber: (idx + 1).toString(),
               itemWidth,
@@ -77,6 +79,7 @@ export default class Steps extends React.Component {
               iconPrefix,
               wrapperStyle: style,
               progressDot,
+			  onClick: canClick ? () => {} : () => { onClick(idx) },
             };
 
             // fix tail color
