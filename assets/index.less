@@ -416,6 +416,7 @@
   }
   .@{stepsPrefixClass}-image {
 	  width: 100%;
+	  margin: 0 auto;
 	  overflow: hidden;
 	  img {
 		  width: 100%;
@@ -425,6 +426,16 @@
 	  img:hover {
 		  opacity: 1;
 		  transform: scale(1.2)
+	  }
+  }
+  @media (max-width: 768px) {
+	  .@{stepsPrefixClass}-image {
+		  width: 45%;
+	  }
+  }
+  @media (max-width: 480px) {
+	  .@{stepsPrefixClass}-image {
+		  width: 35%;
 	  }
   }
   .@{stepsPrefixClass}-head {
@@ -444,6 +455,9 @@
     }
   }
   .@{stepsPrefixClass}-status-process {
+    .@{stepsPrefixClass}-main {
+	    margin-top: 4px;
+	}
 	.@{stepsPrefixClass}-image {
 	  background: white; /* For browsers that do not support gradients */
   	  background: -webkit-radial-gradient(@primary-color 5%, @primary-color 15%, white 60%); /* Safari 5.1-6.0 */
